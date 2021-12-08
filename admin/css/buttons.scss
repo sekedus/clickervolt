@@ -1,0 +1,59 @@
+.ui-accordion {
+    .button {
+        &.ui-state-active {
+            background-color: #aaa;
+            color: #000;
+
+            &.focus, &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.button, input[type=button], button, div.dt-buttons button.dt-button {
+    @extend .unselectable;
+    @extend .fx-shine;
+
+    $backgroundColor: $themeColorButtonsBG;
+    $textColor: $themeColorButtonsText;
+    $borderColor: $themeColorButtonsBG;
+
+    background-color: $backgroundColor;
+    color: $textColor;
+    border: 1px solid $borderColor;
+
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+    height: 30px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    &.opened, &.ui-state-active, &.ui-state-focus {
+        background: #eee;
+        border-color: #999;
+        color: #333;
+        box-shadow: inset 0 2px 5px -3px rgba(0,0,0,.5);        
+    }
+
+    &:hover:not(.opened) {
+        background-color: $backgroundColor;
+        color: $textColor;
+        border: 1px solid $borderColor;
+    }
+
+    &.green {
+        background-color: #7db944;
+        border-top-color: rgb(0, 170, 115);
+        border-bottom-color: rgb(0, 153, 103);
+        border-right-color: rgb(0, 153, 103);
+        border-left-color: rgb(0, 153, 103);
+        box-shadow: rgb(0, 153, 103) 0px 1px 0px 0px;
+    }
+
+    &.button-calendar {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+}

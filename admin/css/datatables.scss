@@ -1,0 +1,18 @@
+div.dt-buttons {
+
+    float: right;
+    margin-right: 20px;
+
+    button {
+        &.dt-button:not(.buttons-columnVisibility) {
+            background-image: none !important;
+        }
+
+        &.dt-button.buttons-columnVisibility {
+            color: #333 !important;
+            border: 1px solid #555 !important;
+            margin-top: 0px;
+            margin-bottom: 4px;
+        }
+    }
+}
